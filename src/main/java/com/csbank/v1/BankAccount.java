@@ -11,9 +11,15 @@ public class BankAccount {
         return balance;
     }
 
+<<<<<<< Updated upstream
     public boolean deposit(int deposit) {
         if (deposit > 0){
             balance = balance + deposit;
+=======
+    public boolean deposit(int amount) {
+        if (amount > 0){
+            balance = balance + amount;
+>>>>>>> Stashed changes
         } else {
             System.out.println("Invalid input.");
             return false;
@@ -21,6 +27,7 @@ public class BankAccount {
         return true;
     }
 
+<<<<<<< Updated upstream
     public boolean withdraw(int withdraw) {
         if (withdraw <= 0) {
             System.out.println("Invalid input.");
@@ -44,3 +51,17 @@ public class BankAccount {
 
 
 
+=======
+    public int withdraw(int amount) {
+        if (amount <= 0) {
+            System.out.println("Invalid input.");
+        } else if (amount > balance) {
+            System.out.println("Insufficient funds.");
+        } else {
+            balance -= amount;
+            return amount;
+        }
+        return amount;
+    }
+}
+>>>>>>> Stashed changes

@@ -39,15 +39,26 @@ public class BankAccountTest {
     @Test
     public void testNegativeWithdrawal() {
         BankAccount account = new BankAccount(1000);
+<<<<<<< Updated upstream
         assertFalse(account.withdraw(-10));
+=======
+        assertEquals(-10, account.withdraw(-10));
+>>>>>>> Stashed changes
         assertEquals(1000, account.getBalance());
     }
 
     @Test
     public void testOverWithdrawal() {
         BankAccount account = new BankAccount(1000);
+<<<<<<< Updated upstream
         assertFalse(account.withdraw(10000));
         assertEquals(1000, account.getBalance());
     }
     // write the negative case.  cases that break your class!
+=======
+        assertEquals(10000, account.withdraw(10000));
+        assertEquals(1000, account.getBalance());
+    }
+
+>>>>>>> Stashed changes
 }
